@@ -1,12 +1,21 @@
-import * as s3 from './s3.ts'
-import JSONL from './jsonl.ts'
+import * as s3 from './s3'
+import JSONL from './jsonl'
+import { sleep, chunkArray, settledSeparator } from './misc-js-funcs'
 
 export {
   s3,
-  JSONL
+  JSONL,
+  sleep,
+  chunkArray,
+  settledSeparator
 }
 
 export default {
   s3,
-  JSONL
+  JSONL,
+  utils: {
+    sleep,
+    chunkArray,
+    settledSeparator
+  }
 }
