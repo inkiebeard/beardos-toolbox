@@ -35,12 +35,15 @@ const timeSinceString = (ms: number) => {
 export {
   sleep,
   chunkArray,
-  settledSeparator
+  settledSeparator,
+  timeFormat,
+  timeSinceString
 }
 
 export default {
   sleep,
   chunkArray,
   settledSeparator,
-  timeFormat
+  timeFormat,
+  timeSinceString
 }
