@@ -20,6 +20,17 @@ const settledSeparator = (result: Array<PromiseSettledResult<any>>) => {
   const rejected = result.filter((r) => r.status === 'rejected')
   return { settled, rejected, total: result.length }
 }
+  
+const timeFormat = (ms: number) => {
+  if (ms < 1000) return `${ms} ms`;
+  if (ms < 60000) return `${(ms / 1000).toFixed(2)} secs`;
+  if (ms < 3600000) return `${(ms / 60000).toFixed(2)} mins`;
+  return `${(ms / 3600000).toFixed(2)} hrs`;
+}
+                   
+const timeSinceString = (ms: number) => {
+  return timeFormat(Date.now() - ms);
+}
 
 export {
   sleep,
@@ -30,5 +41,6 @@ export {
 export default {
   sleep,
   chunkArray,
-  settledSeparator
+  settledSeparator,
+  timeFormat
 }
