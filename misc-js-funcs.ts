@@ -32,12 +32,18 @@ const timeSinceString = (ms: number) => {
   return timeFormat(Date.now() - ms);
 }
 
+const generateRandomString = (length) => {
+  return Math.random().toString(36).substring(2, 2 + length);
+}
+
+
 export {
   sleep,
   chunkArray,
   settledSeparator,
   timeFormat,
-  timeSinceString
+  timeSinceString,
+  generateRandomString
 }
 
 export default {
@@ -45,5 +51,6 @@ export default {
   chunkArray,
   settledSeparator,
   timeFormat,
-  timeSinceString
+  timeSinceString,
+  generateRandomString
 }
