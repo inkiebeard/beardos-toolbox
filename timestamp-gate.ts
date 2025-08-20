@@ -23,10 +23,10 @@ export class TimestampGate {
   }
 
   /**
-   * Check if `id` is allowed based on `ttlMs`. If allowed, persist `now`.
-   * @param id     Unique key to gate.
-   * @param ttlMs  Time-to-live in milliseconds.
-   * @param now    Optional timestamp (ms). Defaults to Date.now() for minimal overhead.
+   * Check if `id` is allowed based on `ttl`. If allowed, persist `now`.
+   * @param {string} id      Unique key to gate.
+   * @param {number} now     Optional timestamp (ms). Defaults to Date.now() for minimal overhead.
+   * @param {number?} ttl    Time-to-live in milliseconds.
    * @returns true if allowed (and stored), false otherwise.
    */
   check(id: string, now: number = Date.now(), ttl: number = this.defaultTLL): boolean {
