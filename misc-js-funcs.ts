@@ -27,12 +27,12 @@ const timeFormat = (ms: number) => {
   if (ms < 3600000) return `${(ms / 60000).toFixed(2)} mins`;
   return `${(ms / 3600000).toFixed(2)} hrs`;
 }
-                   
+
 const timeSinceString = (ms: number) => {
   return timeFormat(Date.now() - ms);
 }
 
-const generateRandomString = (length) => {
+const generateRandomString = (length = 8) => {
   return Math.random().toString(36).substring(2, 2 + length);
 }
 

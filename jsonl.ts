@@ -1,3 +1,5 @@
+import { EOL } from 'os'
+
 /**
  * made fairly specifically for arrays when dealing with larger qunatities of data that you may need to concat later
  */

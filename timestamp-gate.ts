@@ -8,8 +8,8 @@
  */
 export class TimestampGate {
   private static _instance: TimestampGate | null = null
-  private readonly store: Map<string, number>
-  private readonly defaultTTL: number
+  private readonly store!: Map<string, number>
+  private readonly defaultTTL!: number
 
   private constructor (defaultTTL?: number) {
     if (TimestampGate._instance) return TimestampGate._instance

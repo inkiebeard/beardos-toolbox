@@ -21,7 +21,7 @@ export const putObject = async(config: IS3Config, data: Buffer | string, key: st
   try {
     const cl = getClient(config);
 
-    const params = {
+    const params: { Bucket: string; Key: string; Body: Buffer | string; ContentType?: string } = {
       Bucket: config.bucket,
       Key: key,
       Body: typeof data === 'string' ? Buffer.from(data, "utf-8") : data
