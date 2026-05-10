@@ -33,7 +33,7 @@ import {
   getTileAtWorld,
   getTileAtScreen,
   TileFlags,
-} from './tile-map.ts'
+} from './index'
 
 type Unit = { id: string; hp: number }
 

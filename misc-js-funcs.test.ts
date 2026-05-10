@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { chunkArray, timeFormat, timeSinceString, generateRandomString, settledSeparator } from './misc-js-funcs.ts'
+import { chunkArray, timeFormat, timeSinceString, generateRandomString, settledSeparator } from './index.ts'
 
 describe('chunkArray', () => {
   it('splits into chunks of the given size', () => {

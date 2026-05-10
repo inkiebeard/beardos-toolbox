@@ -11,6 +11,7 @@ const shared = {
   bundle: true,
   platform: 'node',
   // AWS SDK is optional peer dep — don't bundle it
+  // Keep external so esbuild doesn't bundle it; dynamic import in s3.ts prevents parse-time failure
   external: ['@aws-sdk/client-s3'],
   sourcemap: true,
 }
