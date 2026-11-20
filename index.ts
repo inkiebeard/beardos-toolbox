@@ -5,6 +5,7 @@ import * as jsMisc from './misc-js-funcs'
 export * from './misc-js-funcs'
 import tileMap from './tile-map'
 export * from './tile-map'
+export * from './airports'
 
 export {
   s3,
